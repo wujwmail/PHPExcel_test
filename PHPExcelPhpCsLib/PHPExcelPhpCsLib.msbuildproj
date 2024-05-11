@@ -1,0 +1,13 @@
+﻿<Project Sdk="Peachpie.NET.Sdk/1.2.0-dev">
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <TargetFramework>Net5.0</TargetFramework>
+     
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**/*.php" />
+  </ItemGroup>
+  <ItemGroup>
+   
+  </ItemGroup>
+</Project>
