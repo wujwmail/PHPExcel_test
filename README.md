@@ -1,13 +1,16 @@
 # PHPExcel_test
 
-This is a test project that uses the PHPExcel library and the PeachPie Compiler to rewrite it in C#.
+This is a test project that utilizes the PHPExcel library and the PeachPie Compiler for C# rewriting.
 
-# This is a test project to verify the functionality of the peachpie (C#, PHP) version of the PHPExcel library
-> For more information on peachpie, please refer to: https://github.com/peachpiecompiler/peachpie
+# Introduction
+
+This project serves as a test to validate the functionality of the PeachPie (C#, PHP) version of the PHPExcel library.
+  > For more information about PeachPie, please refer to: [https://github.com/peachpiecompiler/peachpie](https://github.com/peachpiecompiler/peachpie)        
+  > For more information about PHPExcel, please refer to: [https://github.com/PHPOffice/PHPExcel](https://github.com/PHPOffice/PHPExcel)       
 
 ## Project Structure
 
-This project is divided into two main parts:
+This project consists of two main components:
 
-1. **ExcelApp**: This is a peachpie application project used for testing.
-2. **PHPExcelPhpCsLib**: This is a library project that contains the implementation of converting the PHPExcel library to C# code.
+1. **ExcelApp**: This is a PeachPie application project used for testing.
+2. **PHPExcelPhpCsLib**: This is a library project that includes the implementation of converting the PHPExcel library into C# code.
