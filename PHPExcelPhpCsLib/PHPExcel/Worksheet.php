@@ -2458,14 +2458,18 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
         $maxCol = PHPExcel_Cell::stringFromColumnIndex($rangeEnd[0] -1);
         $maxRow = $rangeEnd[1];
 
+        //$maxCol++;
+        $maxCol=ord($maxCol);
         $maxCol++;
+        $minCol=ord($minCol);
         // Loop through rows
         $r = -1;
         for ($row = $minRow; $row <= $maxRow; ++$row) {
             $rRef = ($returnCellRef) ? $row : ++$r;
             $c = -1;
             // Loop through columns in the current row
-            for ($col = $minCol; $col != $maxCol; ++$col) {
+            for ($col = $minCol; $col != $maxCol; $col=ord($col),++$col) {
+                $col = chr($col);
                 $cRef = ($returnCellRef) ? $col : ++$c;
                 //    Using getCell() will create a new cell if it doesn't already exist. We don't want that to happen
                 //        so we test and retrieve directly against _cellCollection

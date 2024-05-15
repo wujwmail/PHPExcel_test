@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>program.php</StartupObject>
+    <StartupObject>test_writeAttribute.php</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**/*.php" />

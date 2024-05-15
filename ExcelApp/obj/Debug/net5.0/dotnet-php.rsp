@@ -1,0 +1,214 @@
+/output-name:ExcelApp
+/target:exe
+/o:false
+/fullpaths:True
+/debug+
+/target-framework:.NETCoreApp,Version=v5.0
+/temp-output:obj\Debug\net5.0\
+/out:obj\Debug\net5.0\ExcelApp.dll
+/m:test_writeAttribute.php
+/debug-type:portable
+/v:1.0.0
+/d:NET5_0_OR_GREATER
+/d:NETCOREAPP1_0_OR_GREATER
+/d:NETCOREAPP1_1_OR_GREATER
+/d:NETCOREAPP2_0_OR_GREATER
+/d:NETCOREAPP2_1_OR_GREATER
+/d:NETCOREAPP2_2_OR_GREATER
+/d:NETCOREAPP3_0_OR_GREATER
+/d:NETCOREAPP3_1_OR_GREATER
+/d:DEBUG
+/r:C:\Users\wjw\.nuget\packages\bcrypt.net-next\4.0.2\lib\net5.0\BCrypt.Net-Next.dll
+/r:C:\Users\wjw\.nuget\packages\devsense.php.parser\8.2.13161\lib\net5.0\Devsense.PHP.Parser.dll
+/r:C:\Users\wjw\.nuget\packages\devsense.php.phar\1.0.40\lib\netstandard2.0\Devsense.PHP.Phar.dll
+/r:C:\Users\wjw\.nuget\packages\fluentftp\33.0.3\lib\netstandard2.1\FluentFTP.dll
+/r:C:\Users\wjw\.nuget\packages\htmlagilitypack\1.11.25\lib\netstandard2.0\HtmlAgilityPack.dll
+/r:C:\Users\wjw\.nuget\packages\isopoh.cryptography.argon2\1.1.10\lib\net5.0\Isopoh.Cryptography.Argon2.dll
+/r:C:\Users\wjw\.nuget\packages\isopoh.cryptography.blake2b\1.1.10\lib\net5.0\Isopoh.Cryptography.Blake2b.dll
+/r:C:\Users\wjw\.nuget\packages\isopoh.cryptography.securearray\1.1.10\lib\net5.0\Isopoh.Cryptography.SecureArray.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\Microsoft.CSharp.dll
+/r:C:\Users\wjw\.nuget\packages\microsoft.extensions.objectpool\5.0.3\lib\net5.0\Microsoft.Extensions.ObjectPool.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\Microsoft.VisualBasic.Core.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\Microsoft.VisualBasic.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\Microsoft.Win32.Primitives.dll
+/r:C:\Users\wjw\.nuget\packages\mono.posix\7.1.0-final.1.21458.1\lib\netcoreapp3.1\Mono.Posix.dll
+/r:C:\Users\wjw\.nuget\packages\mono.unix\7.1.0-final.1.21458.1\lib\netcoreapp3.1\Mono.Unix.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\mscorlib.dll
+/r:C:\Users\wjw\.nuget\packages\mvp.xml.netstandard\1.1.1\lib\netstandard2.0\mvp.xml.dll
+/r:C:\Users\wjw\.nuget\packages\mysqlconnector\2.0.0\lib\net5.0\MySqlConnector.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\netstandard.dll
+/r:C:\Users\wjw\.nuget\packages\ngettext\0.6.6\lib\netstandard2.0\NGettext.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.codeanalysis\1.2.0-dev\lib\netstandard2.0\Peachpie.CodeAnalysis.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library\1.2.0-dev\lib\net5.0\Peachpie.Library.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.graphics\1.2.0-dev\lib\net5.0\Peachpie.Library.Graphics.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.mssql\1.2.0-dev\lib\net5.0\Peachpie.Library.MsSql.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.mysql\1.2.0-dev\lib\net5.0\Peachpie.Library.MySql.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.network\1.2.0-dev\lib\net5.0\Peachpie.Library.Network.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.pdo\1.2.0-dev\lib\net5.0\Peachpie.Library.PDO.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.regularexpressions\1.6.0\lib\netstandard2.1\Peachpie.Library.RegularExpressions.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.scripting\1.2.0-dev\lib\net5.0\Peachpie.Library.Scripting.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.library.xmldom\1.2.0-dev\lib\net5.0\Peachpie.Library.XmlDom.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.microsoft.codeanalysis\3.7.1\lib\netstandard2.0\Peachpie.Microsoft.CodeAnalysis.dll
+/r:C:\Users\wjw\.nuget\packages\peachpie.runtime\1.2.0-dev\lib\net5.0\Peachpie.Runtime.dll
+/r:E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\bin\Debug\net5.0\PHPExcelPhpCsLib.dll
+/r:C:\Users\wjw\.nuget\packages\rationals\1.4.0\lib\netstandard1.3\Rationals.dll
+/r:C:\Users\wjw\.nuget\packages\sixlabors.fonts\1.0.0-beta0013\lib\netstandard2.1\SixLabors.Fonts.dll
+/r:C:\Users\wjw\.nuget\packages\sixlabors.imagesharp\1.0.0\lib\netcoreapp3.1\SixLabors.ImageSharp.dll
+/r:C:\Users\wjw\.nuget\packages\sixlabors.imagesharp.drawing\1.0.0-beta0010\lib\netcoreapp3.1\SixLabors.ImageSharp.Drawing.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.AppContext.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Buffers.dll
+/r:C:\Users\wjw\.nuget\packages\system.codedom\4.7.0\ref\netstandard2.0\System.CodeDom.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Collections.Concurrent.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Collections.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Collections.Immutable.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Collections.NonGeneric.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Collections.Specialized.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.Annotations.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.DataAnnotations.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.EventBasedAsync.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ComponentModel.TypeConverter.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Configuration.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Console.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Core.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Data.Common.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Data.DataSetExtensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Data.dll
+/r:C:\Users\wjw\.nuget\packages\system.data.sqlclient\4.6.0\ref\netcoreapp2.1\System.Data.SqlClient.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.Contracts.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.Debug.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.DiagnosticSource.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.FileVersionInfo.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.Process.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.StackTrace.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.TextWriterTraceListener.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.Tools.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.TraceSource.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.Tracing.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Drawing.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Drawing.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Dynamic.Runtime.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Formats.Asn1.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Globalization.Calendars.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Globalization.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Globalization.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.Compression.Brotli.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.Compression.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.Compression.FileSystem.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.Compression.ZipFile.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.dll
+/r:C:\Users\wjw\.nuget\packages\system.io.filesystem.accesscontrol\4.7.0\ref\netstandard2.0\System.IO.FileSystem.AccessControl.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.FileSystem.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.FileSystem.DriveInfo.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.FileSystem.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.FileSystem.Watcher.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.IsolatedStorage.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.MemoryMappedFiles.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.Pipes.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.IO.UnmanagedMemoryStream.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Linq.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Linq.Expressions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Linq.Parallel.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Linq.Queryable.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Memory.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Http.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Http.Json.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.HttpListener.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Mail.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.NameResolution.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.NetworkInformation.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Ping.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Requests.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Security.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.ServicePoint.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.Sockets.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.WebClient.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.WebHeaderCollection.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.WebProxy.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.WebSockets.Client.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Net.WebSockets.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Numerics.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Numerics.Vectors.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ObjectModel.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.DispatchProxy.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Emit.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Emit.ILGeneration.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Emit.Lightweight.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Metadata.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Reflection.TypeExtensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Resources.Reader.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Resources.ResourceManager.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Resources.Writer.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.CompilerServices.VisualC.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Handles.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.InteropServices.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.InteropServices.RuntimeInformation.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Intrinsics.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Loader.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Numerics.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Serialization.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Serialization.Formatters.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Serialization.Json.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Serialization.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Runtime.Serialization.Xml.dll
+/r:C:\Users\wjw\.nuget\packages\system.security.accesscontrol\4.7.0\ref\netstandard2.0\System.Security.AccessControl.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Claims.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Cryptography.Algorithms.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Cryptography.Csp.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Cryptography.Encoding.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Cryptography.Primitives.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Cryptography.X509Certificates.dll
+/r:C:\Users\wjw\.nuget\packages\system.security.cryptography.xml\4.4.0\ref\netstandard2.0\System.Security.Cryptography.Xml.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.dll
+/r:C:\Users\wjw\.nuget\packages\system.security.permissions\4.7.0\ref\netcoreapp3.0\System.Security.Permissions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.Principal.dll
+/r:C:\Users\wjw\.nuget\packages\system.security.principal.windows\4.7.0\ref\netcoreapp3.0\System.Security.Principal.Windows.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Security.SecureString.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ServiceModel.Web.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ServiceProcess.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.Encoding.CodePages.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.Encoding.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.Encoding.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.Encodings.Web.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.Json.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Text.RegularExpressions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Channels.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Overlapped.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Tasks.Dataflow.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Tasks.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Tasks.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Tasks.Parallel.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Thread.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.ThreadPool.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Threading.Timer.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Transactions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Transactions.Local.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.ValueTuple.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Web.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Web.HttpUtility.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Windows.dll
+/r:C:\Users\wjw\.nuget\packages\system.windows.extensions\4.7.0\ref\netcoreapp3.0\System.Windows.Extensions.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.Linq.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.ReaderWriter.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.Serialization.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.XDocument.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.XmlDocument.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.XmlSerializer.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.XPath.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\System.Xml.XPath.XDocument.dll
+/r:C:\Users\wjw\.nuget\packages\system.xml.xpath.xmldocument\4.3.0\ref\netstandard1.3\System.Xml.XPath.XmlDocument.dll
+/r:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0\WindowsBase.dll
+program.php
+test_writeAttribute.php
