@@ -631,6 +631,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		// initialize
 		$this->_pos					= 0;
 		$this->_codepage			= 'CP1252';
+		//$this->_codepage			= 'UTF-16LE';
 		$this->_formats				= array();
 		$this->_objFonts			= array();
 		$this->_palette				= array();
@@ -742,7 +743,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 
 		// Parse the individual sheets
 		foreach ($this->_sheets as $sheet) {
-
+$sheet['name']=str_replace(chr(0),"",$sheet['name']);
 			if ($sheet['sheetType'] != 0x00) {
 				// 0x00: Worksheet, 0x02: Chart, 0x06: Visual Basic module
 				continue;
@@ -2944,7 +2945,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 
 			// convert to UTF-8
 			$retstr = self::_encodeUTF16($retstr, $isCompressed);
-
+            $retstr = str_replace(chr(0),"",$retstr); //wjw+
 			// read additional Rich-Text information, if any
 			$fmtRuns = array();
 			if ($hasRichText) {
