@@ -330,6 +330,7 @@ class PHPExcel_Reader_Excel2007 extends PHPExcel_Reader_Abstract implements PHPE
 			$contents = $archive->getFromName(substr($fileName, 1));
 		}
 
+		if(defined("DEV_PATH") && !is_utf8_env()) $contents=to_gbk($contents);
 		return $contents;
 	}
 

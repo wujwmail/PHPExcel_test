@@ -492,6 +492,11 @@ class PHPExcel_Shared_String
 	 */
 	public static function ConvertEncoding($value, $to, $from)
 	{
+            if(defined("DEV_PATH") && !is_utf8_env()){  //wjw+  用于windows下xls互转xlsx
+                if($to=="UTF-8") $to="GBK";
+                if($from=="UTF-8") $from="GBK";
+            }
+
 		if (self::getIsIconvEnabled()) {
 			return iconv($from, $to, $value);
 		}
