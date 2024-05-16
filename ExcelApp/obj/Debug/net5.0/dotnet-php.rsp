@@ -6,7 +6,7 @@
 /target-framework:.NETCoreApp,Version=v5.0
 /temp-output:obj\Debug\net5.0\
 /out:obj\Debug\net5.0\ExcelApp.dll
-/m:test_writeAttribute.php
+/m:program.php
 /debug-type:portable
 /v:1.0.0
 /d:NET5_0_OR_GREATER

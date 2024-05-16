@@ -1679,56 +1679,56 @@
     "Peachpie.App/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-znKCSXk2LJDoX/gGziwSNV5qG0SUuf6YMTO4l1e3725CesnbCjJ0OqthG5Te5o2pgtLE4ARu7pVsNvwqcIJmdw==",
+      "sha512": "sha512-tjNR+vZe4oOPlOP92kTTJrp4+6fUUmClT/rsC8YnETIe7UvAXuxJHbSUIS2C6KsclYzmG0t+YgNPHtSsKdyr7w==",
       "path": "peachpie.app/1.2.0-dev",
       "hashPath": "peachpie.app.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.CodeAnalysis/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0iDEvGw92+NDJ7J6tyfdd61ij7uPLnGvnoR3Bq+S82Nj9zaqekv7TwsHcV+b3gV5Y6Jwbsnek89ZH+LuXpmWZw==",
+      "sha512": "sha512-cJ9xsNGZ0ee7k0V2RKx8sCZdJAUKwDoCN+ynIdURtQ8xYalDgWz7MMFa8/g58ZEhruJuhZG0f10gLBdYfN+6CA==",
       "path": "peachpie.codeanalysis/1.2.0-dev",
       "hashPath": "peachpie.codeanalysis.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-70J1p/N6nxEWll4f7s5jM8k/wV+7JtG9nSrndluAxLXH4Uox+GeODoxd902qFBL+d+0862S+nHnQoWscKU1UXQ==",
+      "sha512": "sha512-HxlD9e3ClXt9lTlgEl1zCnC6wn+1qA03nqcQgfpaAd7tV4z4H6VcIhlAyFTD0TedXgM9tC7Mg78JOJhpSIVRnA==",
       "path": "peachpie.library/1.2.0-dev",
       "hashPath": "peachpie.library.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.Graphics/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7o5qRr/n6svMC4/wzpbjYswBJjwOXMszCXues92uGia/+VbTCNjG/02uQ+/PXTmyKrwYWLrmwvf+n1MsPT5D1w==",
+      "sha512": "sha512-63rFpwABE2F5JLkrXxr7EbR2M7NW5Nru/E1pubjYSTk9Dn3j52RJyeTqxRwbsDiF6IR8l/KTNVUaNh6xMn1C8g==",
       "path": "peachpie.library.graphics/1.2.0-dev",
       "hashPath": "peachpie.library.graphics.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.MsSql/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/sBkT1ZlNRcklbr2Af2LP0KjBya8CBtIMOjILtCtQXtbiVKd58BFrH1SzbQbRUz0dI9OMdRaay1E2qyPsQzEbA==",
+      "sha512": "sha512-Pds71RftJP79jYNp8nxHmbPVYf0sdrv7bvx0bihAcJI9Q1b4SGDTAq+SzG6nmLarLLEfqfjhrXtRk6gXmoenoQ==",
       "path": "peachpie.library.mssql/1.2.0-dev",
       "hashPath": "peachpie.library.mssql.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.MySql/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t8ZY/ksKYy9PP2p0OJHG/03n0U5WPdNp9+mGUlqo+/KBlhb9uuJcc5UrmIjZ+yymRaVhMVUdFO/+Yz6bO2H9+g==",
+      "sha512": "sha512-JhYWBl8zjMDDTlicRkD/RHBF0NEbLJkLmiUIlqdqA8gbLBgmrIebmA2Uja2OVmz9IpWcjYyPuozzSik9WRIWfQ==",
       "path": "peachpie.library.mysql/1.2.0-dev",
       "hashPath": "peachpie.library.mysql.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.Network/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-To4IMs2GsgWoVBvo6pyNogmXzLiTlu7HV/IR6xlAFO/qZS5fbZQnQqtjmEOfRcMtC9gNDqF5V51V42qBsXAi2Q==",
+      "sha512": "sha512-8cmPZRvnoTcEcMDNVx8ltmh7yidYiBfr8uitd+iZh5ftQ9t/I5ZaR7kfeFiOEMzy3VrV9Aqga+WJUTZ4eruszw==",
       "path": "peachpie.library.network/1.2.0-dev",
       "hashPath": "peachpie.library.network.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.PDO/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I3YOL5XUr3Vfks/ZHuBo7MqPu6sGJ98QtAZ4IMVx2+RDZci2dZwYvh2bJx7fHOmzV6Ujy1a4h5gholS0OKYKCQ==",
+      "sha512": "sha512-43iitBgbm5eBMZiByxJiee8TY2Yc2pm6mBVNR0nxHf+b2/6m2vzd6QGkyagjvhgPHCsYY/VnrEdeeyW2PODc2w==",
       "path": "peachpie.library.pdo/1.2.0-dev",
       "hashPath": "peachpie.library.pdo.1.2.0-dev.nupkg.sha512"
     },
@@ -1742,14 +1742,14 @@
     "Peachpie.Library.Scripting/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kP/9OpbBYHhXvV0iyg9Cu0BTOpiV3oTgwli6lTL5CmIZXciEi4X14xj+lP49hgH2pcAMy18nre1oARIPzTEWsw==",
+      "sha512": "sha512-lpOkawo+IZHmJLwrYmUC6VvzQ0aWECGHX4ErVeP5nun3Noj0TTO00utLfegXJu3hXtG5FctSe/lZNW07ksHs/g==",
       "path": "peachpie.library.scripting/1.2.0-dev",
       "hashPath": "peachpie.library.scripting.1.2.0-dev.nupkg.sha512"
     },
     "Peachpie.Library.XmlDom/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eo2S5CNq8teb4/tN8RdMeJ/wXsLoK7+wbc31+fHSiDgFWfbxrK0kK4GCETfx70mmtGJzo/dHGJVd/ilJbFMtjg==",
+      "sha512": "sha512-WAEGvLvDEeHsRX475VJdjzYvUR7a4MlLdIgEZwHyOMrpC6K/w+n3jeUAq2b1av+fXAgEu8Yadwa/1P1kpIQ4pg==",
       "path": "peachpie.library.xmldom/1.2.0-dev",
       "hashPath": "peachpie.library.xmldom.1.2.0-dev.nupkg.sha512"
     },
@@ -1763,7 +1763,7 @@
     "Peachpie.Runtime/1.2.0-dev": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8jKCr2TV8Y6iDOLOOLlCUMPfFaYmiOLm9iExlJAEorbvQXfEhk0ZE7R4zXDJlbEdNFF834YTP8pjwDOqzNEBZg==",
+      "sha512": "sha512-one6Qijr+a51U9sRCQI0Sj4KRflXczRKmNPsdbloMdFZ5eBVTtsAv0nyikKXzehpG6GUZcG8NswyCXZXr1kVtA==",
       "path": "peachpie.runtime/1.2.0-dev",
       "hashPath": "peachpie.runtime.1.2.0-dev.nupkg.sha512"
     },

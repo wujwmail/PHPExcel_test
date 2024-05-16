@@ -1,7 +1,6 @@
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\bin\Debug\net5.0\PHPExcelPhpCsLib.deps.json
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\bin\Debug\net5.0\PHPExcelPhpCsLib.dll
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\bin\Debug\net5.0\PHPExcelPhpCsLib.pdb
-E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\obj\Debug\net5.0\PHPExcelPhpCsLib.msbuildproj.AssemblyReference.cache
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\obj\Debug\net5.0\PHPExcelPhpCsLib.msbuildproj.CoreCompileInputs.cache
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\obj\Debug\net5.0\PHPExcelPhpCsLib.dll
 E:\wjw_php\第三方PHP模块\PHPExcel_test\PHPExcelPhpCsLib\obj\Debug\net5.0\PHPExcelPhpCsLib.pdb
