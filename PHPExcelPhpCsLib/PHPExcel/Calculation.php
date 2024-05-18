@@ -2035,9 +2035,10 @@ class PHPExcel_Calculation {
 
 
 	public static function _translateSeparator($fromSeparator,$toSeparator,$formula,&$inBraces) {
-		$strlen = mb_strlen($formula);
+		$strlen =iconv_strlen($formula); //wjw= $strlen = mb_strlen($formula);
 		for ($i = 0; $i < $strlen; ++$i) {
-			$chr = mb_substr($formula,$i,1);
+			//wjw= $chr = mb_substr($formula,$i,1);
+            $chr = iconv_substr($formula,$i,1);
 			switch ($chr) {
 				case '{' :	$inBraces = TRUE;
 							break;
@@ -2045,7 +2046,8 @@ class PHPExcel_Calculation {
 							break;
 				case $fromSeparator :
 							if (!$inBraces) {
-								$formula = mb_substr($formula,0,$i).$toSeparator.mb_substr($formula,$i+1);
+								//wjw= $formula = mb_substr($formula,0,$i).$toSeparator.mb_substr($formula,$i+1);
+                                $formula = iconv_substr($formula,0,$i).$toSeparator.mb_substr($formula,$i+1);
 							}
 			}
 		}
