@@ -204,6 +204,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 								&$str_total, &$str_unique, &$str_table, &$colors,
 								$parser )
 	{
+        
 		// It needs to call its parent's constructor explicitly
 		parent::__construct();
 
@@ -468,7 +469,6 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 
 		// Add part 3 of the Workbook globals
 		$this->_data .= $part3;
-
 		return $this->_data;
 	}
 
@@ -658,7 +658,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 			// Loop named ranges
 			$namedRanges = $this->_phpExcel->getNamedRanges();
 			foreach ($namedRanges as $namedRange) {
-
+ 
 				// Create absolute coordinate
 				$range = PHPExcel_Cell::splitRange($namedRange->getRange());
 				for ($i = 0; $i < count($range); $i++) {
@@ -747,6 +747,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 				// store the DEFINEDNAME record
 				$chunk .= $this->writeData($this->_writeDefinedNameBiff8(pack('C', 0x07), $formulaData, $i + 1, true));
 			}
+            
 		}
 
 		// write the print areas, if any
@@ -914,6 +915,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 									   $itabCur, $itabFirst,
 									   $ctabsel, $wTabRatio);
 		$this->_append($header . $data);
+         
 	}
 
 	/**
@@ -946,6 +948,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		$length = strlen($data);
 		$header = pack("vv",  $record, $length);
 		$this->_append($header . $data);
+        
 	}
 
 	/**
@@ -978,6 +981,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		for ($i = 0; $i < $total_references; ++$i) {
 			$data .= $this->_parser->_references[$i];
 		}
+        
 		return $this->writeData($header . $data);
 	}
 
@@ -996,6 +1000,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		$header    = pack("vv",  $record, $length);
 		$data      = pack("vCC", $ixfe, $BuiltIn, $iLevel);
 		$this->_append($header . $data);
+ 
 	}
 
 	/**
@@ -1053,6 +1058,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		$header   = pack("vv", $record, $length);
 		$data     = pack("v",  $cxals);
 		$this->_append($header . $data);
+               
 	}
 
 	/**
@@ -1075,6 +1081,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		$header      = pack("vv",  $record, $length);
 		$data        = pack("CC", $cch, $rgch);
 		$this->_append($header . $data . $sheetname);
+        
 	}
 
 	/**
@@ -1137,6 +1144,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		$data              .= pack("C", $colmin);
 		$data              .= pack("C", $colmax);
 		$this->_append($header . $data);
+        
 	}
 
 	/**
@@ -1220,6 +1228,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 		// End of data
 		$data              .= pack("C", 0x10);
 		$this->_append($header . $data);
+        
 	}
 
 	/**
@@ -1278,6 +1287,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 
 		$header = pack("vvv",  $record, $length, $ccv);
 		$this->_append($header . $data);
+        
 	}
 
 	/**
@@ -1304,10 +1314,15 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 
 		// start SST record data block with total number of strings, total number of unique strings
 		$recordData = pack("VV", $this->_str_total, $this->_str_unique);
+//$this->_str_table=PHPExcel_Writer_Excel5_Worksheet::$tabArr;
+//$k=array_keys($this->_str_table);
+//print_r($k);
+//echo "\n".base64_encode($k[1])." < -k  Workbook.php   <======== 4 ===============================\n";
+
 
 		// loop through all (unique) strings in shared strings table
 		foreach (array_keys($this->_str_table) as $string) {
-
+            $string=base64_decode($string);  //wjw+
 			// here $string is a BIFF8 encoded string
 
 			// length = character count
@@ -1385,7 +1400,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 				}
 			}
 		}
-
+ //echo base64_encode($recordData)."   Workbook.php   <=======================================\n";
 		// Store the last record data block unless it is empty
 		// if there was no need for any continue records, this will be the for SST record data block itself
 		if (strlen($recordData) > 0) {
@@ -1403,7 +1418,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 
 			$chunk .= $this->writeData($data);
 		}
-
+        //echo base64_encode($chunk)."   Workbook.php   <------------------------\n";
 		return $chunk;
 	}
 
@@ -1420,7 +1435,6 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
 			$record = 0x00EB;
 			$length = strlen($data);
 			$header = pack("vv",  $record, $length);
-
 			return $this->writeData($header . $data);
 
 		} else {

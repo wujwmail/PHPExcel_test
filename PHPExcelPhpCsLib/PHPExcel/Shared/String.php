@@ -3,7 +3,7 @@
  * PHPExcel
  *
  * Copyright (c) 2006 - 2014 PHPExcel
- *
+ * 更改: 解决汉字的兼容性 wjw240517
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
@@ -23,6 +23,10 @@
  * @copyright  Copyright (c) 2006 - 2014 PHPExcel (http://www.codeplex.com/PHPExcel)
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
  * @version    ##VERSION##, ##DATE##
+
+
+ * 更改: 解决汉字的兼容性 wjw240517
+
  */
 
 
@@ -270,11 +274,14 @@ class PHPExcel_Shared_String
 
 	/**
 	 * Get whether mbstring extension is available
-	 *
+	 * wjw240517: mb系列函数内核有bug,永远返回: false
 	 * @return boolean
 	 */
 	public static function getIsMbstringEnabled()
 	{
+       return false;
+       /***wjw517 
+
 		if (isset(self::$_isMbstringEnabled)) {
 			return self::$_isMbstringEnabled;
 		}
@@ -283,19 +290,23 @@ class PHPExcel_Shared_String
 			true : false;
 
 		return self::$_isMbstringEnabled;
+        */
 	}
 
 	/**
 	 * Get whether iconv extension is available
-	 *
+	 * wjw240517: mb系列函数内核有bug,永远返回: true
 	 * @return boolean
 	 */
 	public static function getIsIconvEnabled()
 	{
+
 		if (isset(self::$_isIconvEnabled)) {
 			return self::$_isIconvEnabled;
 		}
-
+        self::$_isIconvEnabled = true;
+        return true;
+/*       
 		// Fail if iconv doesn't exist
 		if (!function_exists('iconv')) {
 			self::$_isIconvEnabled = false;
@@ -327,6 +338,7 @@ class PHPExcel_Shared_String
 		// If we reach here no problems were detected with iconv
 		self::$_isIconvEnabled = true;
 		return true;
+*/
 	}
 
 	public static function buildCharacterSets() {
@@ -376,7 +388,7 @@ class PHPExcel_Shared_String
 
 	/**
 	 * Try to sanitize UTF8, stripping invalid byte sequences. Not perfect. Does not surrogate characters.
-	 *
+	 * 尝试清理 UTF8，去除无效的字节序列。 不完美。 不代理字符。
 	 * @param string $value
 	 * @return string
 	 */
@@ -408,8 +420,9 @@ class PHPExcel_Shared_String
 
 	/**
 	 * Formats a numeric value as a string for output in various output writers forcing
+     * 将数值格式化为字符串，以便在各种输出编写器中强制输出
 	 * point as decimal separator in case locale is other than English.
-	 *
+     * 点作为小数点分隔符，以防语言环境不是英语。
 	 * @param mixed $value
 	 * @return string
 	 */
@@ -426,8 +439,12 @@ class PHPExcel_Shared_String
 	 * If mbstring extension is not available, ASCII is assumed, and compressed notation is used
 	 * although this will give wrong results for non-ASCII strings
 	 * see OpenOffice.org's Documentation of the Microsoft Excel File Format, sect. 2.5.3
-	 *
-	 * @param string  $value    UTF-8 encoded string
+
+     * 将UTF-8字符串转换为BIFF8 Unicode字符串数据（8位字符串长度）
+     * 使用未压缩的符号写入字符串，没有富文本，没有亚洲语音
+     * 如果 mbstring 扩展不可用，则假定为 ASCII，并使用压缩表示法
+     * 虽然这对于非 ASCII 字符串会给出错误的结果* @param string  $value    UTF-8 encoded string
+
 	 * @param mixed[] $arrcRuns Details of rich text runs in $value
 	 * @return string
 	 */
@@ -441,9 +458,11 @@ class PHPExcel_Shared_String
 				0x0001 : 0x0000;
 			$data = pack('CC', $ln, $opt);
 			// characters
+
 			$data .= self::ConvertEncoding($value, 'UTF-16LE', 'UTF-8');
 		}
 		else {
+           
 			$data = pack('vC', $ln, 0x09);
 			$data .= pack('v', count($arrcRuns));
 			// characters
@@ -453,6 +472,7 @@ class PHPExcel_Shared_String
 				$data .= pack('v', $cRun['fontidx']);
 			}
 		}
+
 		return $data;
 	}
 
@@ -462,8 +482,13 @@ class PHPExcel_Shared_String
 	 * If mbstring extension is not available, ASCII is assumed, and compressed notation is used
 	 * although this will give wrong results for non-ASCII strings
 	 * see OpenOffice.org's Documentation of the Microsoft Excel File Format, sect. 2.5.3
-	 *
-	 * @param string $value UTF-8 encoded string
+
+* 将UTF-8字符串转换为BIFF8 Unicode字符串数据（16位字符串长度）
+* 使用未压缩的符号写入字符串，没有富文本，没有亚洲语音
+* 如果 mbstring 扩展不可用，则假定为 ASCII，并使用压缩表示法
+* 虽然这对于非 ASCII 字符串会给出错误的结果
+     *
+	 * @param string $value UTF-8 encoded string     EXcel  97-2003写人所用
 	 * @return string
 	 */
 	public static function UTF8toBIFF8UnicodeLong($value)
@@ -475,10 +500,14 @@ class PHPExcel_Shared_String
 		$opt = (self::getIsIconvEnabled() || self::getIsMbstringEnabled()) ?
 			0x0001 : 0x0000;
 
-		// characters
+		// characters                  
 		$chars = self::ConvertEncoding($value, 'UTF-16LE', 'UTF-8');
 
+//echo "\n".base64_encode($chars)."  chars  Worksheet.php   <======= $ln ================================\n";
+
 		$data = pack('vC', $ln, $opt) . $chars;
+//echo "\n".base64_encode($data)."    Worksheet.php   <======= $ln ================================\n";
+        
 		return $data;
 	}
 
@@ -492,19 +521,26 @@ class PHPExcel_Shared_String
 	 */
 	public static function ConvertEncoding($value, $to, $from)
 	{
-            if(defined("DEV_PATH") && !is_utf8_env()){  //wjw+  用于windows下xls互转xlsx
-                if($to=="UTF-8") $to="GBK";
-                if($from=="UTF-8") $from="GBK";
-            }
+        if(defined("DEV_PATH") && !is_utf8_env()){  //wjw+  用于windows下xls转为xlsx
+		    if($to=="UTF-8") $to="GBK";
+			//if($from=="UTF-8") $from="GBK"; //wjw+  用于windows下xls转为xls,目前不可用
+			
+		}
+ 
+		//echo " $value, $to, $from 2\n";
+        //if($value=="安徽宁国") $value="abcd";
 
 		if (self::getIsIconvEnabled()) {
-			return iconv($from, $to, $value);
+		   $value = iconv($from, $to, $value);
+			return $value;
 		}
-
+/*
 		if (self::getIsMbstringEnabled()) {
-			return mb_convert_encoding($value, $to, $from);
+		  	$value = mb_convert_encoding($value, $to, $from);
+           // $value = str_replace(chr(0),"",$value);
+			return $value;
 		}
-
+*/
 		if($from == 'UTF-16LE'){
 			return self::utf16_decode($value, false);
 		}else if($from == 'UTF-16BE'){
@@ -522,7 +558,13 @@ class PHPExcel_Shared_String
 	 * This function was taken from http://php.net/manual/en/function.utf8-decode.php
 	 * and $bom_be parameter added.
 	 *
-	 * @param   string  $str  UTF-16 encoded data to decode.
+* 解码UTF-16编码的字符串。
+*
+* 可以处理 BOM'ed 数据和非 BOM'ed 数据。
+* 如果没有可用的 BOM，则采用 Big-Endian 字节顺序。
+* 该函数取自http://php.net/manual/en/function.utf8-decode.php
+* 添加了 $bom_be 参数。
+     * @param   string  $str  UTF-16 encoded data to decode.
 	 * @return  string  UTF-8 / ISO encoded data.
 	 * @access  public
 	 * @version 0.2 / 2010-05-13
@@ -547,7 +589,7 @@ class PHPExcel_Shared_String
 
 	/**
 	 * Get character count. First try mbstring, then iconv, finally strlen
-	 *
+	 * 获取字符数。 首先尝试 mbstring，然后 iconv，最后 strlen
 	 * @param string $value
 	 * @param string $enc Encoding
 	 * @return int Character count
@@ -561,7 +603,6 @@ class PHPExcel_Shared_String
 		if (self::getIsIconvEnabled()) {
 			return iconv_strlen($value, $enc);
 		}
-
 		// else strlen
 		return strlen($value);
 	}
@@ -596,9 +637,9 @@ class PHPExcel_Shared_String
 	 */
 	public static function StrToUpper($pValue = '')
 	{
-		if (function_exists('mb_convert_case')) {
-			return mb_convert_case($pValue, MB_CASE_UPPER, "UTF-8");
-		}
+//wjw517		if (function_exists('mb_convert_case')) {
+//wjw517		return mb_convert_case($pValue, MB_CASE_UPPER, "UTF-8");
+//wjw517		}
 		return strtoupper($pValue);
 	}
 
@@ -610,9 +651,9 @@ class PHPExcel_Shared_String
 	 */
 	public static function StrToLower($pValue = '')
 	{
-		if (function_exists('mb_convert_case')) {
-			return mb_convert_case($pValue, MB_CASE_LOWER, "UTF-8");
-		}
+//wjw517		if (function_exists('mb_convert_case')) {
+//wjw517			return mb_convert_case($pValue, MB_CASE_LOWER, "UTF-8");
+//wjw517		}
 		return strtolower($pValue);
 	}
 
@@ -625,15 +666,16 @@ class PHPExcel_Shared_String
 	 */
 	public static function StrToTitle($pValue = '')
 	{
-		if (function_exists('mb_convert_case')) {
-			return mb_convert_case($pValue, MB_CASE_TITLE, "UTF-8");
-		}
+//wjw517		if (function_exists('mb_convert_case')) {
+//wjw517			return mb_convert_case($pValue, MB_CASE_TITLE, "UTF-8");
+//wjw517		}
 		return ucwords($pValue);
 	}
 
     public static function mb_is_upper($char)
     {
         return mb_strtolower($char, "UTF-8") != $char;
+
     }
 
     public static function mb_str_split($string)
@@ -652,7 +694,7 @@ class PHPExcel_Shared_String
 	 */
 	public static function StrCaseReverse($pValue = '')
 	{
-        if (self::getIsMbstringEnabled()) {
+        if (self::getIsMbstringEnabled()||true) {
             $characters = self::mb_str_split($pValue);
             foreach($characters as &$character) {
                 if(self::mb_is_upper($character)) {
@@ -670,6 +712,8 @@ class PHPExcel_Shared_String
 	 * Identify whether a string contains a fractional numeric value,
 	 *    and convert it to a numeric if it is
 	 *
+* 识别字符串是否包含小数数值，
+* 如果是则将其转换为数字
 	 * @param string &$operand string value to test
 	 * @return boolean
 	 */
@@ -687,6 +731,8 @@ class PHPExcel_Shared_String
 	 * Get the decimal separator. If it has not yet been set explicitly, try to obtain number
 	 * formatting information from locale.
 	 *
+* 获取小数点分隔符。 如果尚未明确设置，请尝试获取数量
+* 格式化来自语言环境的信息。
 	 * @return string
 	 */
 	public static function getDecimalSeparator()

@@ -134,7 +134,7 @@ class PHPExcel_Shared_ZipStreamWrapper {
 	 * @return  string
      */
     function stream_read($count) {
-        $ret = substr($this->_data, $this->_position, $count);
+        $ret = substr($this->_data, $this->_position, $count);  
         $this->_position += strlen($ret);
         return $ret;
     }

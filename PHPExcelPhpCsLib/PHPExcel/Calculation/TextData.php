@@ -25,7 +25,6 @@
  * @version		##VERSION##, ##DATE##
  */
 
-
 /** PHPExcel root directory */
 if (!defined('PHPEXCEL_ROOT')) {
 	/**
@@ -77,12 +76,12 @@ class PHPExcel_Calculation_TextData {
 		if ((!is_numeric($character)) || ($character < 0)) {
 			return PHPExcel_Calculation_Functions::VALUE();
 		}
-
-		if (function_exists('mb_convert_encoding')) {
-			return mb_convert_encoding('&#'.intval($character).';', 'UTF-8', 'HTML-ENTITIES');
-		} else {
+        //wjw---- 2024-05-17
+		//if (function_exists('mb_convert_encoding')) {
+		//	return mb_convert_encoding('&#'.intval($character).';', 'UTF-8', 'HTML-ENTITIES');
+		//} else {
 			return chr(intval($character));
-		}
+		//}
 	}
 
 
@@ -148,13 +147,13 @@ class PHPExcel_Calculation_TextData {
 		}
 
 		$character = $characters;
-		if ((function_exists('mb_strlen')) && (function_exists('mb_substr'))) {
-			if (mb_strlen($characters, 'UTF-8') > 1) { $character = mb_substr($characters, 0, 1, 'UTF-8'); }
-			return self::_uniord($character);
-		} else {
+//wjw517		if ((function_exists('mb_strlen')) && (function_exists('mb_substr'))) {
+//wjw517			if (mb_strlen($characters, 'UTF-8') > 1) { $character = mb_substr($characters, 0, 1, 'UTF-8'); }
+//wjw517			return self::_uniord($character);
+//wjw517		} else {
 			if (strlen($characters) > 0) { $character = substr($characters, 0, 1); }
 			return ord($character);
-		}
+//wjw517		}
 	}	//	function ASCIICODE()
 
 
@@ -243,11 +242,11 @@ class PHPExcel_Calculation_TextData {
 				if (PHPExcel_Shared_String::CountCharacters($needle) == 0) {
 					return $offset;
 				}
-				if (function_exists('mb_strpos')) {
-					$pos = mb_strpos($haystack, $needle, --$offset, 'UTF-8');
-				} else {
+//wjw517				if (function_exists('mb_strpos')) {
+//wjw517					$pos = mb_strpos($haystack, $needle, --$offset, 'UTF-8');
+//wjw517				} else {
 					$pos = strpos($haystack, $needle, --$offset);
-				}
+//wjw517				}
 				if ($pos !== false) {
 					return ++$pos;
 				}
@@ -279,11 +278,11 @@ class PHPExcel_Calculation_TextData {
 				if (PHPExcel_Shared_String::CountCharacters($needle) == 0) {
 					return $offset;
 				}
-				if (function_exists('mb_stripos')) {
-					$pos = mb_stripos($haystack, $needle, --$offset,'UTF-8');
-				} else {
+//wjw517				if (function_exists('mb_stripos')) {
+//wjw517					$pos = mb_stripos($haystack, $needle, --$offset,'UTF-8');
+//wjw517				} else {
 					$pos = stripos($haystack, $needle, --$offset);
-				}
+//wjw517				}
 				if ($pos !== false) {
 					return ++$pos;
 				}
@@ -341,11 +340,11 @@ class PHPExcel_Calculation_TextData {
 			$value = ($value) ? PHPExcel_Calculation::getTRUE() : PHPExcel_Calculation::getFALSE();
 		}
 
-		if (function_exists('mb_substr')) {
-			return mb_substr($value, 0, $chars, 'UTF-8');
-		} else {
+//wjw517		if (function_exists('mb_substr')) {
+//wjw517			return mb_substr($value, 0, $chars, 'UTF-8');
+//wjw517		} else {
 			return substr($value, 0, $chars);
-		}
+//wjw517		}
 	}	//	function LEFT()
 
 
@@ -370,11 +369,11 @@ class PHPExcel_Calculation_TextData {
 			$value = ($value) ? PHPExcel_Calculation::getTRUE() : PHPExcel_Calculation::getFALSE();
 		}
 
-		if (function_exists('mb_substr')) {
-			return mb_substr($value, --$start, $chars, 'UTF-8');
-		} else {
+//wjw517		if (function_exists('mb_substr')) {
+//wjw517			return mb_substr($value, --$start, $chars, 'UTF-8');
+//wjw517		} else {
 			return substr($value, --$start, $chars);
-		}
+//wjw517		}
 	}	//	function MID()
 
 
@@ -397,11 +396,11 @@ class PHPExcel_Calculation_TextData {
 			$value = ($value) ? PHPExcel_Calculation::getTRUE() : PHPExcel_Calculation::getFALSE();
 		}
 
-		if ((function_exists('mb_substr')) && (function_exists('mb_strlen'))) {
-			return mb_substr($value, mb_strlen($value, 'UTF-8') - $chars, $chars, 'UTF-8');
-		} else {
+//wjw517		if ((function_exists('mb_substr')) && (function_exists('mb_strlen'))) {
+//wjw517			return mb_substr($value, mb_strlen($value, 'UTF-8') - $chars, $chars, 'UTF-8');
+//wjw517		} else {
 			return substr($value, strlen($value) - $chars);
-		}
+//wjw517		}
 	}	//	function RIGHT()
 
 
@@ -418,11 +417,11 @@ class PHPExcel_Calculation_TextData {
 			$value = ($value) ? PHPExcel_Calculation::getTRUE() : PHPExcel_Calculation::getFALSE();
 		}
 
-		if (function_exists('mb_strlen')) {
-			return mb_strlen($value, 'UTF-8');
-		} else {
+//wjw517		if (function_exists('mb_strlen')) {
+//wjw517			return mb_strlen($value, 'UTF-8');
+//wjw517		} else {
 			return strlen($value);
-		}
+//wjw517		}
 	}	//	function STRINGLENGTH()
 
 
@@ -521,30 +520,30 @@ class PHPExcel_Calculation_TextData {
 		$instance	= floor(PHPExcel_Calculation_Functions::flattenSingleValue($instance));
 
 		if ($instance == 0) {
-			if(function_exists('mb_str_replace')) {
-				return mb_str_replace($fromText,$toText,$text);
-			} else {
+//wjw517			if(function_exists('mb_str_replace')) {
+//wjw517				return mb_str_replace($fromText,$toText,$text);
+//wjw517			} else {
 				return str_replace($fromText,$toText,$text);
-			}
+//wjw517			}
 		} else {
 			$pos = -1;
 			while($instance > 0) {
-				if (function_exists('mb_strpos')) {
-					$pos = mb_strpos($text, $fromText, $pos+1, 'UTF-8');
-				} else {
+//wjw517				if (function_exists('mb_strpos')) {
+//wjw517					$pos = mb_strpos($text, $fromText, $pos+1, 'UTF-8');
+//wjw517				} else {
 					$pos = strpos($text, $fromText, $pos+1);
-				}
+//wjw517				}
 				if ($pos === false) {
 					break;
 				}
 				--$instance;
 			}
 			if ($pos !== false) {
-				if (function_exists('mb_strlen')) {
-					return self::REPLACE($text,++$pos,mb_strlen($fromText, 'UTF-8'),$toText);
-				} else {
+//wjw517				if (function_exists('mb_strlen')) {
+//wjw517					return self::REPLACE($text,++$pos,mb_strlen($fromText, 'UTF-8'),$toText);
+//wjw517				} else {
 					return self::REPLACE($text,++$pos,strlen($fromText),$toText);
-				}
+//wjw517				}
 			}
 		}
 
