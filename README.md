@@ -19,8 +19,6 @@ This project consists of two main components:
 
 ## Known issues:  
 
-Issues discovered through the experimental project https://github.com/wujwmail/PHPExcel_test:
-
 1. Associated arrays cannot use UTF-16LE/UTF-16BE encoded strings as keys!
 
 2. The mb_ series functions have errors when handling UTF-16LE and UTF-16BE character encodings! For example:
