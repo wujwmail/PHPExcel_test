@@ -49,3 +49,12 @@ This project consists of two main components:
 
           iconv_to_UTF-16: 2Y8vZgBOKk5LbdWL
           mb_xx_to_UTF-16: 6L+Z5piv5LiA5Liq5rWL6K+V
+
+## Fixed issues:      
+
+1. GBK encoding compatibility issues    
+
+2. https://github.com/peachpiecompiler/peachpie/issues/1142      
+
+3. Fix https://github.com/peachpiecompiler/peachpie/issues/1143 issues in PHP program   
+
