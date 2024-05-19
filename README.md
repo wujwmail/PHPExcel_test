@@ -2,7 +2,7 @@
 
 This is a test project that utilizes the PHPExcel library and the PeachPie Compiler for C# rewriting.
 
-**Dependent projects**: [https://github.com/wujwmail/phpcs_core](https://github.com/wujwmail/phpcs_core)       
+- **Note**: Only rely on peachpie.sdk compiled by the [phpcs_core](https://github.com/wujwmail/phpcs_core) project
 
 # Introduction
 
