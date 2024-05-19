@@ -523,7 +523,7 @@ class PHPExcel_Shared_String
 	{
         if(defined("DEV_PATH") && !is_utf8_env()){  //wjw+  用于windows下xls转为xlsx
 		    if($to=="UTF-8") $to="GBK";
-			//if($from=="UTF-8") $from="GBK"; //wjw+  用于windows下xls转为xls,目前不可用
+			if($from=="UTF-8") $from="GBK"; //wjw+  用于windows下xls转为xls
 			
 		}
  
